@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay</title>
+    <link href="main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Images/favicon.png">
+
+    <style>
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 10s linear infinite;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+
+    <!-- 1st 1/2 page -->
+    <div style="background-image: linear-gradient( 109.6deg,  rgb(253, 253, 253) 11.2%, rgb(207, 226, 235) 100.2% );"
+        class="relative flex flex-col justify-between overflow-x-hidden w-full">
+
+        <!-- navbar -->
+        <nav id="navbar" class="fixed max-w-[1400px] mx-auto p-5 z-50">
+
+            <div class="w-[1340px] flex items-center justify-evenly">
+                <!-- nav logo -->
+                <a href="/">
+                    <img src="Images/logo.gif" alt="logo" width="180px" height="40px">
+                </a>
+
+                <!-- nav texts -->
+                <ul class="flex justify-between gap-5 font-medium text-gray-700">
+                    <li
+                        class="hover:text-blue-600 cursor-pointer pb-3 pt-2 transition-all duration-200 relative group hidden lg:block">
+                        <a href="#" class="">
+                            Payments
+                        </a>
+
+                        <div
+                            class="absolute bottom-0 w-full h-1 mt-5 bg-blue-600 rounded group-hover:block hidden transition-all duration-1000">
+                        </div>
+                    </li>
+
+
+                    <li
+                        class="hover:text-blue-600 cursor-pointer pb-3 pt-2 transition-all duration-200 relative group hidden lg:block">
+                        <a href="#" class="">
+                            Banking+
+                        </a>
+
+                        <div
+                            class="absolute bottom-0 w-full h-1 mt-5 bg-blue-600 rounded group-hover:block hidden transition-all duration-1000">
+                        </div>
+                    </li>
+
+                    <li
+                        class="hover:text-blue-600 cursor-pointer pb-3 pt-2 transition-all duration-200 relative group hidden lg:block">
+                        <a href="#" class="">
+                            Payroll
+                        </a>
+
+                        <div
+                            class="absolute bottom-0 w-full h-1 mt-5 bg-blue-600 rounded group-hover:block hidden transition-all duration-1000">
+                        </div>
+                    </li>
+
+                    <li
+                        class="hover:text-blue-600 cursor-pointer pb-3 pt-2 transition-all duration-200 relative group hidden lg:block">
+                        <a href="#" class="">
+                            Partners
+                        </a>
+
+                        <div
+                            class="absolute bottom-0 w-full h-1 mt-5 bg-blue-600 rounded group-hover:block hidden transition-all duration-1000">
+                        </div>
+                    </li>
+
+                    <li
+                        class="hover:text-blue-600 cursor-pointer pb-3 pt-2 transition-all duration-200 relative group hidden lg:block">
+                        <a href="#" class="">
+                            Resources
+                        </a>
+
+                        <div
+                            class="absolute bottom-0 w-full h-1 mt-5 bg-blue-600 rounded group-hover:block hidden transition-all duration-1000">
+                        </div>
+                    </li>
+
+                    <li
+                        class="hover:text-blue-600 cursor-pointer pb-3 pt-2 transition-all duration-200 relative group hidden lg:block">
+                        <a href="#" class="">
+                            Support
+                        </a>
+
+                        <div
+                            class="absolute bottom-0 w-full h-1 mt-5 bg-blue-600 rounded group-hover:block hidden transition-all duration-1000">
+                        </div>
+                    </li>
+
+                    <li
+                        class="hover:text-blue-600 cursor-pointer pb-3 pt-2 transition-all duration-200 relative group hidden lg:block">
+                        <a href="#" class="">
+                            Pricing
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- flag &buttons -->
+                <div class="flex gap-4">
+                    <img src="Images/india-flag.svg" alt="flag" class="w-35x h-[35px]">
+
+                    <button
+                        class=" border border-blue-700 hover:bg-gray-200 transition-all duration-300 text-sm px-4 py-2 rounded text-blue-700 font-medium">Login
+                    </button>
+
+                    <button
+                        class=" bg-blue-500 hover:bg-blue-700 transition-all duration-200 text-sm flex items-center gap-2 px-5 py-2 rounded text-white font-semibold">
+                        <span>Sign Up</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- hero Section -->
+        <section class="pt-20">
+
+            <div class="relative flex w-[1340px] h-[510px] mx-auto ">
+
+                <div class="absolute left-24 top-24">
+                    <h1 class="text-blue-500 font-semibold text-5xl">Easy In-person Payments</h1>
+                    <h1 class="font-semibold text-5xl mt-3">for India's finest disruptors</h1>
+                    <p class="text-gray-600 text-sm mt-6 font-[580]">Quick Payments | Seamless Integration | Top-tier
+                        UPI stack</p>
+
+                    <div class="flex items-center mt-9 z-10">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded z-10">
+                            Sign Up Now →
+                        </button>
+                        <a href="#" class="ml-4 hover:underline tracking-wide text-blue-600 font-bold z-10">Know
+                            More</a>
+                    </div>
+
+                </div>
+
+                <div class="absolute left-[8rem] w-full h-full object-contain">
+                    <img src="Images/hero-section.png" alt="Hero Section" class="z-0 w-full h-full object-contain">
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+
+        <!-- footer 1 -->
+        <div
+            class="w-[1160px] bg-white rounded-md mx-auto h-9 mb-4 py-[1.97rem] flex items-center justify-between hover:shadow-lg border">
+
+            <div>
+                <ul class="flex gap-3 items-center text-gray-700">
+
+                    <div class="h-7 w-1 rounded bg-blue-500 p-0">
+
+                    </div>
+
+                    <li class="p-1 text-[0.97rem] font-medium flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-stop-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                            <path
+                                d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5z" />
+                        </svg>
+                        I'm here to
+                    </li>
+                    <li
+                        class="bg-gray-100 rounded-xl p-1 px-2 text-[0.8rem] font-medium hover:text-blue-500 hover:bg-slate-100 transition-all duration-200 ease-in-out">
+                        <a href="#">Accept Payments</a>
+                    </li>
+                    <li
+                        class="bg-gray-100 rounded-xl p-1 px-2 text-[0.8rem] font-medium hover:text-blue-500 hover:bg-slate-100 transition-all duration-200 ease-in-out">
+                        <a href="#">Make Payments</a>
+                    </li>
+                    <li
+                        class="bg-gray-100 rounded-xl p-1 px-2 text-[0.8rem] font-medium hover:text-blue-500 hover:bg-slate-100 transition-all duration-200 ease-in-out">
+                        <a href="#">Start Business Banking</a>
+                    </li>
+                    <li
+                        class="bg-gray-100 rounded-xl p-1 px-2 text-[0.8rem] font-medium hover:text-blue-500 hover:bg-slate-100 transition-all duration-200 ease-in-out">
+                        <a href="#">Get Credit Loans</a>
+                    </li>
+                    <li
+                        class="bg-gray-100 rounded-xl p-1 px-2 text-[0.8rem] font-medium hover:text-blue-500 hover:bg-slate-100 transition-all duration-200 ease-in-out">
+                        <a href="#">Automate Payroll</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <a href="#" class="pr-4 text-[0.8rem] font-semibold text-gray-400">//Find the best product for your
+                    business</a>
+            </div>
+
+        </div>
+
+        <!-- Logo scrolling block -->
+        <div class="overflow-hidden">
+            <div class="flex space-x-10 animate-marquee m-6 transition duration-500 hover:grayscale-0 filter grayscale">
+                <!-- Logos -->
+                <img src="Images/C-logo1.avif" alt="Company 1" class=" h-[40px]">
+                <img src="Images/C-logo2.avif" alt="Company 2" class=" h-[40px]">
+                <img src="Images/C-logo3.avif" alt="Company 3" class=" h-[40px]">
+                <img src="Images/C-logo4.png" alt="Company 4" class=" h-[40px]">
+                <img src="Images/C-logo5-1.png" alt="Company 5" class="w-[6.5rem]">
+                <img src="Images/C-logo6.avif" alt="Company 6" class=" h-[60px]">
+                <img src="Images/C-logo8.avif" alt="Company 7" class=" h-[40px]">
+                <img src="Images/C-logo9.avif" alt="Company 8" class=" h-[40px]">
+                <img src="Images/C-logo10.avif" alt="Company 9" class=" h-[40px]">
+                <img src="Images/C-logo11.avif" alt="Company 10" class=" h-[40px]">
+                <img src="Images/C-logo12.avif" alt="Company 11" class="w-32 h-[50px]">
+                <img src="Images/C-logo13.avif" alt="Company 12" class=" h-[40px]">
+                <img src="Images/C-logo14.avif" alt="Company 13" class=" h-[80px]">
+                <img src="Images/C-logo15.avif" alt="Company 14" class=" h-[40px]">
+                <img src="Images/C-logo16.avif" alt="Company 15" class=" h-[40px]">
+
+            </div>
+        </div>
+
+        <!-- book-your-seat -->
+        <div class="relative max-w-[1160px] mx-auto">
+            <img src="Images/book-your-seat.png" alt="png1">
+            <button
+                class="absolute right-2 top-3 bg-white text-gray-800 font-semibold text-[1.rem] border px-4 py-2 rounded flex items-center gap-2 hover:bg-gray-100">BOOK
+                YOUR SEAT
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                </svg>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- 2nd page -->
+    <div class="flex items-center relative mt-[6rem] mb-[6rem] w-[1250px] mx-auto">
+        <div class="mx-auto">
+            <h1 class="text-5xl font-bold text-gray-800">The all in one <span class="text-green-700">finance
+                    platform</span> </h1>
+            <h1 class="text-5xl font-bold text-gray-800 mt-2 mb-3">you've been looking for </h1>
+
+            <div class="flex space-x-3 items-center">
+                <span class="text-gray-500 text-[1rem]">With Razorpay, you can:</span>
+                <span class="text-gray-400 text-2xl">|</span>
+
+                <span class="flex flex-row space-x-4 items-center font-semibold text-[1.08rem] text-gray-700">
+                    <a href="#" class="">Accept Payments</a>
+                    <a href="#">Make payouts</a>
+                    <a href="#">Start Business Banking</a>
+                    <a href="#">Automate Payroll</a>
+                    <a href="#">Get Credit & Loans</a>
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    <!-- content remaining -->
+     <div class="flex  justify-center">
+        <pre>
+            .
+            . 
+            . 
+            .
+            .
+            .
+        </pre>
+     </div>
+
+
+    
+    <!-- sLast page -->
+    <section class="max-w-[1400px] mx-auto relative mb-2 mt-4"
+        style="background-image: linear-gradient( 109.6deg,  rgb(235, 243, 243) 11.2%, rgb(222, 238, 245) 100.2% );">
+        <div class="w-[1200px] h-[300px] mx-auto pt-14 relative flex flex-col items-start gap-6">
+            <h1 class="text-gray-800 text-5xl font-bold max-w-[650px] leading-[4rem]">
+                Supercharge your business with Razorpay
+            </h1>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded z-10">
+                Sign Up Now →
+            </button>
+        </div>
+    </section>
+
+    <!-- last-links -->
+    <div class="max-w-[1200px] mx-auto relative mt-16 mb-4 flex flex-row justify-between">
+        <!-- left-part -->
+        <section class="flex justify-between max-w-[300px]">
+            <div class="flex flex-col space-y-5">
+                <img src="Images/logo-dark.svg" alt="Razorpay-logo" class="w-32">
+
+                <p class="text-gray-400 text-[0.73rem] font-normal leading-[1.15rem] grayscale-0 pr-6 text-shadow-s">
+                    Razorpay is the only payments solution in India that allows businesses to accept, process and
+                    disburse payments with its product suite. It gives you access to all payment modes including credit
+                    card, debit card, netbanking, UPI and popular wallets including JioMoney, Mobikwik, Airtel Money,
+                    FreeCharge, Ola Money and PayZapp.</p>
+
+                <p class="text-gray-400 text-[0.73rem] font-normal leading-[1.15rem] grayscale-0 pr-6 text-shadow-s">
+                    RazorpayX supercharges your business banking experience, bringing effectiveness, efficiency, and
+                    excellence to all financial processes. With RazorpayX, businesses can get access to fully-functional
+                    current accounts, supercharge their payouts and automate payroll compliance.</p>
+
+                <p class="text-gray-400 text-[0.73rem] font-normal leading-[1.15rem] grayscale-0 pr-6 text-shadow-s">
+                    Manage your marketplace, automate bank transfers, collect recurring payments, share invoices with
+                    customers and avail working capital loans - all from a single platform. Fast forward your business
+                    with Razorpay.</p>
+
+
+                <p class="text-gray-400 text-[0.73rem] font-normal leading-[1.15rem] grayscale-0 pr-6 text-shadow-s">
+                    Disclaimer: The RazorpayX powered Current Account and VISA corporate credit card are provided by RBI
+                    licensed banks. Your RazorpayX powered current account is provided by our partner banks i.e, ICICI,
+                    RBL, Yes bank, in accordance with RBI regulations. RazorpayX itself is not a bank and doesn't hold
+                    or claim to hold a banking license.</p>
+
+                <div class="grid grid-cols-2 ">
+                    <a href="https://seal.panaceainfosec.com/index.php?certid=CERT64EBF6C447" target="_blank">
+                        <img src="Images/footer-logo1.avif" alt="logo1" width="100px">
+                    </a>
+                    <img src="Images/footer-logo2.png" alt="logo2" width="70px">
+                    <img src="Images/footer-logo3.avif" alt="logo3" width="70px">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- right-part -->
+        <section class="flex flex-row space-x-28 mx-14">
+
+            <!-- 1st col -->
+            <div class="flex flex-col space-y-5">
+
+                <!-- div 1 -->
+                <div class="flex flex-col space-y-1">
+                    <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">ACCEPT PAYMENTS</h1>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Payment
+                        Aggregator
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Payment
+                        Gateway
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Payment
+                        Pages
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Payment
+                        Links
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[70%]  "></span>
+                    </p>
+                    <div class="flex space-x-3">
+                        <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Razorpay
+                            POS
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[68%] "></span>
+                        </p>
+                        <button class="bg-green-100 text-green-600 font-bold text-[0.6rem] px-1 py-1 rounded-lg cursor-default"> NEW</button>
+                    </div>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">QR Codes
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[47%]"></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Subscriptions
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[65%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Smart
+                        Collect
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[65%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Optimizer
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[47%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Instant
+                        Settlements
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[93%]"></span>
+                    </p>
+
+                </div>
+
+                <!-- div 2 -->
+                <div>
+                    <div class="flex flex-col">
+                        <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">PAYROLL</h1>
+                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">RazorpayX Payroll
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[86%] "></span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- div 3 -->
+                <div>
+                    <div class="flex flex-col">
+                        <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">BECOME A PARTNER</h1>
+                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Refer and Earn
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[72%] "></span>
+                        </p>
+                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Onboarding APIs
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[81%] "></span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- div 4 -->
+                <div>
+                    <div class="flex flex-col">
+                        <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">MORE</h1>
+                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Route
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[30%] "></span>
+                        </p>
+                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Invoices
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[36%] "></span>
+                        </p>
+                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Freelancer Payments
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[90%] "></span>
+                        </p>
+                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">International Payments
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[100%] "></span>
+                        </p>
+                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">UPI
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[16%] "></span>
+                        </p>
+                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">ePOS
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[25%] "></span>
+                        </p>
+                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Checkout Demo
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[68%] "></span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2nd col -->
+            <div class="flex flex-col space-y-5">
+                <!-- div 1 -->
+                <div class="flex flex-col space-y-1">
+                    <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">BANKING PLUS</h1>
+                    <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">RazorpayX
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
+                    </p>
+                    <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Source to pay
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    </p>
+                    <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Current Accounts
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    </p>
+                    <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Payouts
+                        Links
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[70%]  "></span>
+                    </p>
+                    <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Payouts Links
+                        POS
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[68%] "></span>
+                    </p>
+                    <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Corporate Credit Card
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[47%]"></span>
+                    </p>
+                </div>
+
+                <!-- div 2  -->
+                <div class="flex flex-col space-y-1">
+                    <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">DEVELOPERS</h1>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Docs
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Integrations
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">API References
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    </p>
+                </div>
+                
+                <!-- div 3 -->
+                <div class="flex flex-col space-y-1">
+                    <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">RESOURCES</h1>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Blog
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Learn
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">Customer Stories
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Events
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Chargeback Guide
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">Settlement Guide
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    </p>
+                </div>
+
+                <!-- div 4 -->
+                <div class="flex flex-col space-y-1">
+                    <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">SOLUTIONS</h1>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Education 
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">E-commerce
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">SaaS
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">BFSI
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    </p>  
+                </div>
+
+                <!-- div 5 -->
+                <div class="flex flex-col space-y-1">
+                    <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">FREE TOOLS</h1>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">GST Calculator
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">GST Number Search
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">GST Search by PAN
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">ROI Calculator
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">CAGR Calculator
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">EBITDA Calculator
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    </p>
+                </div>
+
+                
+            </div>
+
+            <!-- 3rd col -->
+            <div  class="flex flex-col space-y-5">
+
+                <!-- div 1 -->
+                <div class="flex flex-col space-y-1">
+                    <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">COMPANY</h1>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">About US
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Careers
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">Terms of use
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Privacy Policy
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Grievance Redressal
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">Responsible Disclosure
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Partners
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">White papers
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">Corporate Information
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    </p>
+                </div>
+
+                <!-- div 2 -->
+                <div class="flex flex-col space-y-1">
+                    <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">HELP & SUPPORT</h1>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Support
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    </p>
+                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Knowledge Base
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    </p>
+                </div>
+
+                <!-- div 3 -->
+                <div class="flex flex-col space-y-1">
+                    <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">FIND US ONLINE</h1>
+                    
+                    <div class="flex space-x-2 ">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="Images/facebook-icon.svg" alt="fb" class="w-8">
+                        </a>
+                        <a href="https://x.com/_https_error404" target="_blank">
+                            <img src="Images/twitter-icon.svg" alt="twitter" class="w-8">
+                        </a>
+                        <a href="https://www.instagram.com/http.404.xo/" target="_blank">
+                            <img src="Images/Instagram-icon.svg" alt="instagram" class="w-8">
+                        </a>
+                        
+                        <a href="https://github.com/https-error404" target="_blank">
+                            <img src="Images/github-icon.svg" alt="GitHub" class="w-8">
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/bapi-shelke-404-in/" target="_blank">
+                            <img src="Images/Linkedin-icon.svg" alt="LinkedIn" class="w-8">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- footer -->
+    
+    <footer class="my-4 text-center mt-[4rem] text-gray-600 font-semibold">
+        <p>Payment aggregation services provided by Razorpay Software Private Limited (RSPL) - An RBI Authorised Online Payment Aggregator</p>
+    </footer>
+
+    <footer class="bg-gray-900 text-white py-6 text-center text-sm sm:text-base">
+        
+        <p>© Copyrights. All rights reserved - clone by <span class="font-bold">Bapi Shelke</span></p>
+      </footer>
+      
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent');
+                navbar.classList.add('bg-white', 'shadow-md');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+    </script>
+</body>
+
+</html>
