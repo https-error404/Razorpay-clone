@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Razorpay</title>
+    <title>Razorpay - Best Online Payment Solutions for Accepting Payments India</title>
     <link href="main.css" rel="stylesheet">
     <link rel="shortcut icon" href="Images/favicon.png">
+    <script src="script.js"></script>
 
     <style>
         @keyframes marquee {
@@ -15,12 +16,42 @@
             }
 
             100% {
-                transform: translateX(-50%);
+                transform: translateX(-100%);
             }
         }
 
         .animate-marquee {
-            animation: marquee 10s linear infinite;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes scrollFounder {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .scroll-wrapper {
+            overflow: hidden;
+            position: relative;
+            white-space: nowrap;
+            
+        }
+
+        .scroll-container {
+            display: flex;
+            animation: scrollFounder 20s linear infinite;
+            
+            will-change: transform;
+        }
+
+        .scroll-container>li {
+            flex: 0 0 auto;
+            width: 400px;
+            margin-right: 20px;
         }
     </style>
 </head>
@@ -28,13 +59,13 @@
 <body class="font-sans">
 
     <!-- 1st 1/2 page -->
-    <div style="background-image: linear-gradient( 109.6deg,  rgb(253, 253, 253) 11.2%, rgb(207, 226, 235) 100.2% );"
+    <div style="background-image: linear-gradient( 109.6deg,  rgb(249, 253, 253) 11.2%, rgb(207, 226, 235) 100.2% );"
         class="relative flex flex-col justify-between overflow-x-hidden w-full">
 
         <!-- navbar -->
         <nav id="navbar" class="fixed max-w-[1400px] mx-auto p-5 z-50">
 
-            <div class="w-[1340px] flex items-center justify-evenly">
+            <div class="w-[1330px] flex items-center justify-evenly">
                 <!-- nav logo -->
                 <a href="/">
                     <img src="Images/logo.gif" alt="logo" width="180px" height="40px">
@@ -140,10 +171,26 @@
         </nav>
 
         <!-- hero Section -->
-        <section class="pt-20">
+        <section class="pt-28">
 
-            <div class="relative flex w-[1340px] h-[510px] mx-auto ">
+            <div class="relative flex w-[1340px] h-[470px] mx-auto">
 
+                <!-- next-previous arrow buttons -->
+                <div class="absolute left-10 top-[45%] border border-gray-100 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48" fill="none" class="rotate-[180deg] hover:cursor-pointer">
+                        <circle cx="24" cy="24" r="24" fill="white" class="shadow-xl"/>
+                        <path d="M20 16L28 24L20 32" stroke="blue" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="absolute top-[45%] right-10 group z-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48" fill="none" class="hover:cursor-pointer">
+                        <circle cx="24" cy="24" r="24" fill="white" />
+                        <path d="M20 16L28 24L20 32" stroke="blue" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <!-- image with content -->
                 <div class="absolute left-24 top-24">
                     <h1 class="text-blue-500 font-semibold text-5xl">Easy In-person Payments</h1>
                     <h1 class="font-semibold text-5xl mt-3">for India's finest disruptors</h1>
@@ -160,7 +207,7 @@
 
                 </div>
 
-                <div class="absolute left-[8rem] w-full h-full object-contain">
+                <div class="absolute left-[10rem] -top-0 w-full h-full object-contain">
                     <img src="Images/hero-section.png" alt="Hero Section" class="z-0 w-full h-full object-contain">
                 </div>
 
@@ -178,17 +225,10 @@
             <div>
                 <ul class="flex gap-3 items-center text-gray-700">
 
-                    <div class="h-7 w-1 rounded bg-blue-500 p-0">
-
-                    </div>
+                    <div class="h-7 w-1 rounded-r-md bg-blue-500 p-0"></div>
 
                     <li class="p-1 text-[0.97rem] font-medium flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-stop-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                            <path
-                                d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5z" />
-                        </svg>
+                        <svg overflow="visible" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">   <path stroke-linejoin="miter" fill="var(--token-add2a9eb-6003-4650-a6cf-40d6ea8abeeb, rgb(25, 40, 57))" fill-rule="evenodd" clip-rule="evenodd" d="M11.4595 5.38397C11.5393 5.14442 11.477 4.8803 11.2984 4.70175C11.1199 4.5232 10.8558 4.46085 10.6162 4.5407L6.3762 5.95403C6.17713 6.02039 6.02092 6.1766 5.95456 6.37567L4.54123 10.6157C4.46138 10.8552 4.52372 11.1193 4.70228 11.2979C4.88083 11.4764 5.14495 11.5388 5.3845 11.4589L9.6245 10.0456C9.82357 9.97925 9.97978 9.82304 10.0461 9.62397L11.4595 5.38397ZM6.22778 9.77239L7.11406 7.11353L9.77292 6.22725L8.88664 8.88611L6.22778 9.77239Z"></path>   <path stroke-linejoin="miter" fill="var(--token-add2a9eb-6003-4650-a6cf-40d6ea8abeeb, rgb(25, 40, 57))" fill-rule="evenodd" clip-rule="evenodd" d="M8.00033 0.666504C3.95024 0.666504 0.666992 3.94975 0.666992 7.99984C0.666992 12.0499 3.95024 15.3332 8.00033 15.3332C12.0504 15.3332 15.3337 12.0499 15.3337 7.99984C15.3337 3.94975 12.0504 0.666504 8.00033 0.666504ZM2.00033 7.99984C2.00033 4.68613 4.68662 1.99984 8.00033 1.99984C11.314 1.99984 14.0003 4.68613 14.0003 7.99984C14.0003 11.3135 11.314 13.9998 8.00033 13.9998C4.68662 13.9998 2.00033 11.3135 2.00033 7.99984Z"></path> </svg>
                         I'm here to
                     </li>
                     <li
@@ -222,33 +262,44 @@
         </div>
 
         <!-- Logo scrolling block -->
-        <div class="overflow-hidden">
-            <div class="flex space-x-10 animate-marquee m-6 transition duration-500 hover:grayscale-0 filter grayscale">
+        <div class="w-[1400px] h-fit mx-auto overflow-hidden group relative">
+
+            <div
+                class="flex items-center justify-center space-x-10 animate-marquee m-6 transition duration-500 group-hover:grayscale-0 filter grayscale">
                 <!-- Logos -->
                 <img src="Images/C-logo1.avif" alt="Company 1" class=" h-[40px]">
                 <img src="Images/C-logo2.avif" alt="Company 2" class=" h-[40px]">
-                <img src="Images/C-logo3.avif" alt="Company 3" class=" h-[40px]">
+                <img src="Images/C-logo3.avif" alt="Company 3" class=" h-[35px]">
                 <img src="Images/C-logo4.png" alt="Company 4" class=" h-[40px]">
-                <img src="Images/C-logo5-1.png" alt="Company 5" class="w-[6.5rem]">
+                <img src="Images/C-logo5-1.png" alt="unacedemy" class="h-[50px] w-full">
                 <img src="Images/C-logo6.avif" alt="Company 6" class=" h-[60px]">
                 <img src="Images/C-logo8.avif" alt="Company 7" class=" h-[40px]">
                 <img src="Images/C-logo9.avif" alt="Company 8" class=" h-[40px]">
                 <img src="Images/C-logo10.avif" alt="Company 9" class=" h-[40px]">
-                <img src="Images/C-logo11.avif" alt="Company 10" class=" h-[40px]">
-                <img src="Images/C-logo12.avif" alt="Company 11" class="w-32 h-[50px]">
+                <img src="Images/C-logo11.avif" alt="nykaa" class=" h-[35px]">
+                <img src="Images/C-logo12.avif" alt="zeroda" class="w-48 h-[35px]">
                 <img src="Images/C-logo13.avif" alt="Company 12" class=" h-[40px]">
-                <img src="Images/C-logo14.avif" alt="Company 13" class=" h-[80px]">
-                <img src="Images/C-logo15.avif" alt="Company 14" class=" h-[40px]">
+                <img src="Images/C-logo14.avif" alt="goibibo" class=" h-[100px]">
+                <img src="Images/C-logo15.avif" alt="Cure.fit" class=" h-[50px]">
                 <img src="Images/C-logo16.avif" alt="Company 15" class=" h-[40px]">
 
+                <img src="Images/C-logo1.avif" alt="Company 1" class=" h-[40px]">
+                <img src="Images/C-logo2.avif" alt="Company 2" class=" h-[40px]">
+                <img src="Images/C-logo3.avif" alt="Company 3" class=" h-[40px]">
+
+                <img src="Images/C-logo4.png" alt="Company 4" class=" h-[40px]">
+                <img src="Images/C-logo5-1.png" alt="Company 5" class="h-[50px] w-full">
+                <img src="Images/C-logo6.avif" alt="Company 6" class=" h-[60px]">
+
             </div>
+
         </div>
 
         <!-- book-your-seat -->
         <div class="relative max-w-[1160px] mx-auto">
             <img src="Images/book-your-seat.png" alt="png1">
             <button
-                class="absolute right-2 top-3 bg-white text-gray-800 font-semibold text-[1.rem] border px-4 py-2 rounded flex items-center gap-2 hover:bg-gray-100">BOOK
+                class="absolute right-2 top-[0.45rem] bg-white text-gray-800 font-semibold text-[1.rem] border px-5 py-3 rounded flex items-center gap-2 hover:bg-gray-100 transition-all duration-300">BOOK
                 YOUR SEAT
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-arrow-up-right" viewBox="0 0 16 16">
@@ -261,16 +312,14 @@
     </div>
 
     <!-- 2nd page -->
-    <div class="flex items-center relative mt-[6rem] mb-[6rem] w-[1250px] mx-auto">
-        <div class="mx-auto">
-            <h1 class="text-5xl font-bold text-gray-800">The all in one <span class="text-green-700">finance
-                    platform</span> </h1>
-            <h1 class="text-5xl font-bold text-gray-800 mt-2 mb-3">you've been looking for </h1>
+    <div class="flex items-center relative mt-[6rem] mb-[6rem] max-w-[1400px] mx-auto px-20 ">
+        <div class="w-[1250px]">
+            <h1 class="text-5xl font-bold font[Franklin Gothic Book] text-gray-800 leading-tight">The all in one <span class="text-[#219153]">finance
+                    platform</span><br>you've been looking for </h1>
 
             <div class="flex space-x-3 items-center">
-                <span class="text-gray-500 text-[1rem]">With Razorpay, you can:</span>
+                <span class="text-gray-700 text-[1rem] opacity-70">With Razorpay, you can:</span>
                 <span class="text-gray-400 text-2xl">|</span>
-
                 <span class="flex flex-row space-x-4 items-center font-semibold text-[1.08rem] text-gray-700">
                     <a href="#" class="">Accept Payments</a>
                     <a href="#">Make payouts</a>
@@ -285,9 +334,8 @@
 
     </div>
 
-    
     <!-- content remaining -->
-     <div class="flex  justify-center">
+    <div class="flex  justify-center">
         <pre>
             .
             . 
@@ -296,15 +344,360 @@
             .
             .
         </pre>
-     </div>
+    </div>
 
 
-    
-    <!-- sLast page -->
+
+
+    <!-- Not a developer, cards -->
+    <section class="max-w-[1400px] mx-auto relative py-28 px-20"
+        style="background-image: linear-gradient( 109.6deg,  rgb(237, 241, 241) 11.2%, rgb(236, 240, 241) 100.2% );">
+
+        <!-- text heading part -->
+        <div class="mb-14">
+            <p class="text-gray-500 font-sans font-semibold text-xl">&lt;what html?&gt;</p>
+            <h2 class="text-[2.8rem] leading-tight font-semibold font-[Courier New] text-gray-900"><span
+                    class="text-[#13a856]">Not a developer?</span> <br>
+                Our No-Code products have you covered</h2>
+        </div>
+
+        <!-- cards -->
+        <div class="flex space-x-6 relative">
+            <!-- Card 1 -->
+            <div class="w-[380px] bg-white rounded-lg p-6 shadow-lg">
+                <!-- card name -->
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl text-gray-950 font-[400] ">Payments Links</h3>
+                    <svg class="w-7 h-7" overflow="visible" xmlns="http://www.w3.org/2000/svg" width="100%"
+                        height="100%" viewBox="0 0 24 24" fill="none">
+                        <path stroke-linejoin="miter"
+                            fill="var(--token-03bfc726-b5f8-4b73-837b-6a3fcf6cd4ab, rgb(48, 94, 255))"
+                            fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3 5C2.44772 5 2 5.44772 2 6V9H22V6C22 5.44771 21.5523 5 21 5H3ZM24 6C24 4.34315 22.6569 3 21 3H3C1.34315 3 0 4.34315 0 6V18C0 19.6569 1.34315 21 3 21H9.75C10.3023 21 10.75 20.5523 10.75 20C10.75 19.4477 10.3023 19 9.75 19H3C2.44772 19 2 18.5523 2 18V11H22V13.5C22 14.0523 22.4477 14.5 23 14.5C23.5523 14.5 24 14.0523 24 13.5V6ZM10.8999 17.5208C10.8999 15.5798 12.4797 14 14.4207 14H15.1082C15.6605 14 16.1082 14.4477 16.1082 15C16.1082 15.5523 15.6605 16 15.1082 16H14.4207C13.5843 16 12.8999 16.6844 12.8999 17.5208C12.8999 18.3539 13.5855 19.0417 14.4207 19.0417H15.1082C15.6605 19.0417 16.1082 19.4894 16.1082 20.0417C16.1082 20.594 15.6605 21.0417 15.1082 21.0417H14.4207C12.4785 21.0417 10.8999 19.4561 10.8999 17.5208ZM17.854 15C17.854 14.4477 18.3017 14 18.854 14H19.5461C21.4883 14 23.0669 15.5856 23.0669 17.5208C23.0669 19.463 21.4814 21.0417 19.5461 21.0417H18.854C18.3017 21.0417 17.854 20.594 17.854 20.0417C17.854 19.4894 18.3017 19.0417 18.854 19.0417H19.5461C20.3792 19.0417 21.0669 18.3561 21.0669 17.5208C21.0669 16.6878 20.3814 16 19.5461 16H18.854C18.3017 16 17.854 15.5523 17.854 15ZM3.5 16C3.5 15.4477 3.94772 15 4.5 15H7.5C8.05228 15 8.5 15.4477 8.5 16C8.5 16.5523 8.05228 17 7.5 17H4.5C3.94772 17 3.5 16.5523 3.5 16ZM14.6 17.5208C14.6 16.9685 15.0477 16.5208 15.6 16.5208H18.6C19.1523 16.5208 19.6 16.9685 19.6 17.5208C19.6 18.073 19.1523 18.5208 18.6 18.5208H15.6C15.0477 18.5208 14.6 18.073 14.6 17.5208Z">
+                        </path>
+                    </svg>
+                </div>
+                <!-- text content -->
+                <p class="text-2xl font-semibold mb-14">Accept payments instantly: <span class="text-blue-600">Share
+                        links</span> via email, text, or social.</p>
+
+                <!-- buttons -->
+                <div class="flex items-center space-x-7">
+                    <div>
+                        <button
+                            class="text-blue-700 font-semibold text-[1rem] w-fit group flex space-x-2 items-center relative">
+                            <span>Sign Up</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                            </svg>
+                            <div class=" absolute -left-2 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full"></div>
+                        </button>
+                    </div>
+
+                    <div>
+                        <a href="#"
+                            class="text-blue-700 font-semibold text-[1rem] flex space-x-2 items-center w-fit relative group">
+                            <span>Know More</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                            </svg>
+                            <span class="absolute -left-2 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full"></span>
+                        </a>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="w-[380px] bg-white rounded-lg p-6 shadow-lg">
+                <!-- card name -->
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl text-gray-950 ">Payment Pages</h3>
+                    <svg class="w-7 h-7" overflow="visible" xmlns="http://www.w3.org/2000/svg" width="100%"
+                        height="100%" viewBox="0 0 24 24" fill="none">
+                        <path stroke-linejoin="miter"
+                            fill="var(--token-03bfc726-b5f8-4b73-837b-6a3fcf6cd4ab, rgb(48, 94, 255))"
+                            fill-rule="evenodd" clip-rule="evenodd"
+                            d="M18.2929 0.292893C18.6834 -0.0976311 19.3166 -0.0976311 19.7071 0.292893L21.7071 2.29289C22.0976 2.68342 22.0976 3.31658 21.7071 3.70711C21.3166 4.09763 20.6834 4.09763 20.2929 3.70711L20 3.41421V7C20 7.55228 19.5523 8 19 8C18.4477 8 18 7.55228 18 7V3.41421L17.7071 3.70711C17.3166 4.09763 16.6834 4.09763 16.2929 3.70711C15.9024 3.31658 15.9024 2.68342 16.2929 2.29289L18.2929 0.292893ZM2 4C2 2.34315 3.34314 1 5 1H14.0769C14.6292 1 15.0769 1.44772 15.0769 2C15.0769 2.55228 14.6292 3 14.0769 3H5C4.44771 3 4 3.44771 4 4V19.5C4 20.0523 4.44772 20.5 5 20.5H19C19.5523 20.5 20 20.0523 20 19.5V9.5C20 8.94772 20.4477 8.5 21 8.5C21.5523 8.5 22 8.94772 22 9.5V19.5C22 21.1569 20.6569 22.5 19 22.5H5C3.34315 22.5 2 21.1569 2 19.5V4ZM6 13C6 12.4477 6.44772 12 7 12H11C11.5523 12 12 12.4477 12 13C12 13.5523 11.5523 14 11 14H7C6.44772 14 6 13.5523 6 13ZM6 17C6 16.4477 6.44772 16 7 16H15C15.5523 16 16 16.4477 16 17C16 17.5523 15.5523 18 15 18H7C6.44772 18 6 17.5523 6 17Z">
+                        </path>
+                    </svg>
+                </div>
+                <!-- text content -->
+                <p class="text-2xl font-semibold mb-14">Accept payments without <span class="text-blue-600">coding on a
+                        custom-branded store</span></p>
+
+                <!-- buttons -->
+                <div class="flex items-center space-x-7">
+                    <div>
+                        <button
+                            class="text-blue-700 font-semibold text-[1rem] w-fit group flex space-x-2 items-center relative">
+                            <span>Sign Up</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                            </svg>
+                            <div class=" absolute -left-2 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full"></div>
+                        </button>
+                    </div>
+
+                    <div>
+                        <a href="#"
+                            class="text-blue-700 font-semibold text-[1rem] flex space-x-2 items-center w-fit relative group">
+                            <span>Know More</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                            </svg>
+                            <span class="absolute -left-2 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full"></span>
+                        </a>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="w-[380px] bg-white rounded-lg p-6 shadow-lg">
+                <!-- card name -->
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl text-gray-950 ">Payment Buttons</h3>
+                    <svg class="w-7 h-7" overflow="visible" xmlns="http://www.w3.org/2000/svg" width="100%"
+                        height="100%" viewBox="0 0 24 24" fill="none">
+                        <path stroke-linejoin="miter"
+                            fill="var(--token-03bfc726-b5f8-4b73-837b-6a3fcf6cd4ab, rgb(48, 94, 255))"
+                            fill-rule="evenodd" clip-rule="evenodd"
+                            d="M10.5 6H18.5C20.433 6 22 7.567 22 9.5C22 11.433 20.433 13 18.5 13H10.5C8.567 13 7 11.433 7 9.5C7 7.567 8.567 6 10.5 6ZM5.02034 9.02363C5.26181 6.2091 7.62292 4 10.5 4H18.5C21.5376 4 24 6.46243 24 9.5C24 12.376 21.7925 14.7365 18.9794 14.9794C18.7365 17.7925 16.376 20 13.5 20H5.5C2.46243 20 0 17.5376 0 14.5C0 11.6268 2.22756 9.28193 5.02034 9.02363ZM5.21117 11.0146C3.4179 11.1773 2 12.6841 2 14.5C2 16.433 3.567 18 5.5 18H13.5C15.2632 18 16.7219 16.6961 16.9646 15H10.5C7.98774 15 5.86889 13.3156 5.21117 11.0146Z">
+                        </path>
+                    </svg>
+                </div>
+                <!-- text content -->
+                <p class="text-2xl font-semibold mb-14">Effortlessly <span class="text-blue-600">add a Pay Now button
+                    </span> without any coding knowledge</p>
+
+                <!-- buttons -->
+                <div class="flex items-center space-x-7">
+                    <div>
+                        <button
+                            class="text-blue-700 font-semibold text-[1rem] w-fit group flex space-x-2 items-center relative">
+                            <span>Sign Up</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                            </svg>
+                            <div class=" absolute -left-2 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full"></div>
+                        </button>
+                    </div>
+
+                    <div>
+                        <a href="#"
+                            class="text-blue-700 font-semibold text-[1rem] flex space-x-2 items-center w-fit relative group">
+                            <span>Know More</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                            </svg>
+                            <span class="absolute -left-2 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full"></span>
+                        </a>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- next cha button > -->
+            <div class=" absolute right-4 top-[45%] hover:cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48" fill="none">
+                    <circle cx="24" cy="24" r="24" fill="#3366FF" />
+                    <path d="M20 16L28 24L20 32" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder's Info flip cards and warning section -->
+    <section class="mx-auto ">
+        <!-- heading content -->
+        <div class="w-[1200px] mx-auto flex items-center justify-between pt-24 mb-24">
+            <h2 class="font-[calibri] font-semibold text-6xl">Razorpay grows with <span
+                    class="text-blue-600">you!</span></h2>
+            <p class="font-[cambria] font-semibold text-[1.6rem]">1,50,000+ Businesses</p>
+        </div>
+
+        <!-- Horizontal Scroll Container -->
+        <div class="scroll-wrapper mb-3">
+            <ul class="scroll-container">
+                <!-- Original Founder Cards -->
+                <li>
+                    <div class="relative">
+                        <img src="Images/Founder Images/Aditya Shankar.png" alt="aditya-shankar" class="rounded-lg">
+                        <div class="absolute left-6 bottom-8 z-1">
+                            <h3 class="font-semibold text-[1.15rem] text-white leading-10">Aditya Shankar</h3>
+                            <h6 class="text-sm text-gray-200">Co-founder, Doubtnut</h6>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="mt-20">
+                    <div class="relative">
+                        <img src="Images/Founder Images/Anusree Geonka.png" alt="anusree-geonka" class="rounded-lg">
+                        <div class="absolute left-6 bottom-8 z-1">
+                            <h3 class="font-semibold text-[1.15rem] text-white leading-10">Anusree Geonka</h3>
+                            <h6 class="text-sm text-gray-200">Co-founder, Spark Studio</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="relative">
+                        <img src="Images/Founder Images/D Rawat.png" alt="durlabh-rawat" class="rounded-lg">
+                        <div class="absolute left-6 bottom-8 z-1">
+                            <h3 class="font-semibold text-[1.15rem] text-white leading-10">Durlabh Rawat</h3>
+                            <h6 class="text-sm text-gray-200">Founder, Barosi</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="mt-20">
+                    <div class="relative">
+                        <img src="Images/Founder Images/Neha Tandan Sharma.png" alt="neha-tandan-sharma"
+                            class="rounded-lg">
+                        <div class="absolute left-6 bottom-8 z-1">
+                            <h3 class="font-semibold text-[1.15rem] text-white leading-10">Neha Tandon Sharma</h3>
+                            <h6 class="text-sm text-gray-200">Founder, Isadora Life</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="relative">
+                        <img src="Images/Founder Images/Nikita Gujral.png" alt="nikita-gujral" class="rounded-lg">
+                        <div class="absolute left-6 bottom-8 z-1">
+                            <h3 class="font-semibold text-[1.15rem] text-white leading-10">Nikita Gujral</h3>
+                            <h6 class="text-sm text-gray-200">Founder, AN Fashions</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="mt-20">
+                    <div class="relative">
+                        <img src="Images/Founder Images/Nischay AG.png" alt="nischay-ag" class="rounded-lg">
+                        <div class="absolute left-6 bottom-8 z-1">
+                            <h3 class="font-semibold text-[1.15rem] text-white leading-10">Nischay AG</h3>
+                            <h6 class="text-sm text-gray-200">Co-founder, Jar</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Duplicate Founder Cards for Smooth Loop -->
+                <li>
+                    <div class="relative">
+                        <img src="Images/Founder Images/Aditya Shankar.png" alt="aditya-shankar" class="rounded-lg">
+                        <div class="absolute left-6 bottom-8 z-1">
+                            <h3 class="font-semibold text-[1.15rem] text-white leading-10">Aditya Shankar</h3>
+                            <h6 class="text-sm text-gray-200">Co-founder, Doubtnut</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="mt-20">
+                    <div class="relative">
+                        <img src="Images/Founder Images/Anusree Geonka.png" alt="anusree-geonka" class="rounded-lg">
+                        <div class="absolute left-6 bottom-8 z-1">
+                            <h3 class="font-semibold text-[1.15rem] text-white leading-10">Anusree Geonka</h3>
+                            <h6 class="text-sm text-gray-200">Co-founder, Spark Studio</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="relative">
+                        <img src="Images/Founder Images/D Rawat.png" alt="durlabh-rawat" class="rounded-lg">
+                        <div class="absolute left-6 bottom-8 z-1">
+                            <h3 class="font-semibold text-[1.15rem] text-white leading-10">Durlabh Rawat</h3>
+                            <h6 class="text-sm text-gray-200">Founder, Barosi</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="mt-20">
+                    <div class="relative">
+                        <img src="Images/Founder Images/Neha Tandan Sharma.png" alt="neha-tandan-sharma"
+                            class="rounded-lg">
+                        <div class="absolute left-6 bottom-8 z-1">
+                            <h3 class="font-semibold text-[1.15rem] text-white leading-10">Neha Tandon Sharma</h3>
+                            <h6 class="text-sm text-gray-200">Founder, Isadora Life</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="relative">
+                        <img src="Images/Founder Images/Nikita Gujral.png" alt="nikita-gujral" class="rounded-lg">
+                        <div class="absolute left-6 bottom-8 z-1">
+                            <h3 class="font-semibold text-[1.15rem] text-white leading-10">Nikita Gujral</h3>
+                            <h6 class="text-sm text-gray-200">Founder, AN Fashions</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="mt-20">
+                    <div class="relative">
+                        <img src="Images/Founder Images/Nischay AG.png" alt="nischay-ag" class="rounded-lg">
+                        <div class="absolute left-6 bottom-8 z-1">
+                            <h3 class="font-semibold text-[1.15rem] text-white leading-10">Nischay AG</h3>
+                            <h6 class="text-sm text-gray-200">Co-founder, Jar</h6>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Repeat all the cards to make animation seamless -->
+            </ul>
+        </div>
+
+        <!-- warning section -->
+        <section class="w-[1200px] mx-auto mt-[15rem] mb-[5rem] flex space-x-3 border border-orange-200 rounded p-3 bg-red-50" >
+            <!-- warning svg -->
+            <div>
+                <svg class="bi bi-exclamation-triangle text-success" width="16" height="16" fill="#C04000" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"></path>
+                    <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"></path>
+                  </svg>
+            </div>
+            <!-- warning text -->
+            <div class="flex flex-col space-y-3">
+                <p class="text-[0.79rem] text-gray-800 opacity-80">
+                    To the fullest extent permitted by law, Razorpay Software Private Limited, its affiliates, and each of their respective officers, directors, members, employees, and agents (“Razorpay”) NEVER ask you or any individual to share their personal or financial details for the purpose of any investments, trading, employment or any other related or incidental activity. It has recently come to our attention that some unknown individuals are reaching out to gullible people through WhatsApp, Telegram <span id="dots">...</span><span id="more" style="display:none;"> & other platforms representing to be authorised personals of Razorpay and deceitfully offering unauthorized investment/employment opportunities. Kindly note that these individuals are merely imposters & not authorised by Razorpay to do any such act. Please do not share your login credentials, debit/credit card number, CVV number, OTP, UPI, ATM pin, bank account details or transfer any monies to these individuals. <br><br>
+
+                    While we are pursuing legal recourse against these individuals, however, we advise you to exercise caution in sharing any information online and file a complaint with the authorities, if you come across any such instance. Razorpay disclaims responsibility for losses resulting from unauthorized information sharing or disclosure on platforms like WhatsApp or Telegram, and is not liable for any decisions or actions taken based on such content.<br><br>
+                    
+                    For assistance, please click on Support. Kindly note that here is no other help channel available.</span>
+                    <button onclick="toggleText()" id="myBtn" class="text-blue-700 text-xs font-semibold transition-all duration-100">Read More</button>
+                </p>
+                <button class="flex space-x-1 items-center border border-blue-600 text-blue-600 rounded px-2 py-1 font-semibold w-fit hover:bg-blue-50">
+                    <span class="text-sm">Support</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                      </svg>
+                </button>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- Super charge your business -->
     <section class="max-w-[1400px] mx-auto relative mb-2 mt-4"
-        style="background-image: linear-gradient( 109.6deg,  rgb(235, 243, 243) 11.2%, rgb(222, 238, 245) 100.2% );">
-        <div class="w-[1200px] h-[300px] mx-auto pt-14 relative flex flex-col items-start gap-6">
-            <h1 class="text-gray-800 text-5xl font-bold max-w-[650px] leading-[4rem]">
+        style="background-image: linear-gradient( 109.6deg,  rgba(238, 245, 245, 0.89) 11.2%, rgb(240, 243, 245) 100.2% );">
+        <div class="w-[1200px] mx-auto py-[5.2rem] relative flex flex-col items-start gap-6">
+            <h1 class="font-[Helvetica] text-gray-800 text-[3rem] font-bold max-w-[650px] leading-[4rem]">
                 Supercharge your business with Razorpay
             </h1>
             <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded z-10">
@@ -363,46 +756,50 @@
                 <!-- div 1 -->
                 <div class="flex flex-col space-y-1">
                     <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">ACCEPT PAYMENTS</h1>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Payment
-                        Aggregator
+                    <p class="max-w-fit text-blue-600 relative font-bold hover:cursor-pointer text-[0.9rem] group">
+                        Payment Aggregator
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full"></span>
+                    </p>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Payment Gateway
                         <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Payment
-                        Gateway
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Payment Pages
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full  "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Payment
-                        Pages
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
-                    </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Payment
-                        Links
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[70%]  "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Payment Links
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full  "></span>
                     </p>
                     <div class="flex space-x-3">
-                        <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Razorpay
-                            POS
-                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[68%] "></span>
+                        <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                            Razorpay POS
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                         </p>
-                        <button class="bg-green-100 text-green-600 font-bold text-[0.6rem] px-1 py-1 rounded-lg cursor-default"> NEW</button>
+                        <button
+                            class="bg-green-100 text-green-600 font-bold text-[0.6rem] px-1 py-1 rounded-lg cursor-default">
+                            NEW</button>
                     </div>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">QR Codes
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[47%]"></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">QR
+                        Codes
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full"></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
                         Subscriptions
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[65%] "></span>
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Smart
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Smart
                         Collect
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[65%] "></span>
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Optimizer
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[47%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Optimizer
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Instant
-                        Settlements
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[93%]"></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Instant Settlements
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full"></span>
                     </p>
 
                 </div>
@@ -411,8 +808,9 @@
                 <div>
                     <div class="flex flex-col">
                         <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">PAYROLL</h1>
-                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">RazorpayX Payroll
-                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[86%] "></span>
+                        <p class="max-w-fit text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                            RazorpayX Payroll
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                         </p>
                     </div>
                 </div>
@@ -421,11 +819,13 @@
                 <div>
                     <div class="flex flex-col">
                         <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">BECOME A PARTNER</h1>
-                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Refer and Earn
-                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[72%] "></span>
+                        <p class="max-w-fit text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                            Refer and Earn
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                         </p>
-                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Onboarding APIs
-                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[81%] "></span>
+                        <p class="max-w-fit text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                            Onboarding APIs
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                         </p>
                     </div>
                 </div>
@@ -434,26 +834,33 @@
                 <div>
                     <div class="flex flex-col">
                         <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">MORE</h1>
-                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Route
-                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[30%] "></span>
+                        <p class="max-w-fit text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                            Route
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                         </p>
-                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Invoices
-                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[36%] "></span>
+                        <p class="max-w-fit text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                            Invoices
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                         </p>
-                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Freelancer Payments
-                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[90%] "></span>
+                        <p class="max-w-fit text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                            Freelancer Payments
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                         </p>
-                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">International Payments
-                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[100%] "></span>
+                        <p class="max-w-fit text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                            International Payments
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                         </p>
-                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">UPI
-                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[16%] "></span>
+                        <p class="max-w-fit text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                            UPI
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                         </p>
-                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">ePOS
-                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[25%] "></span>
+                        <p class="max-w-fit text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                            ePOS
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                         </p>
-                        <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Checkout Demo
-                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[68%] "></span>
+                        <p class="max-w-fit text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                            Checkout Demo
+                            <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                         </p>
 
                     </div>
@@ -465,158 +872,200 @@
                 <!-- div 1 -->
                 <div class="flex flex-col space-y-1">
                     <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">BANKING PLUS</h1>
-                    <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">RazorpayX
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        RazorpayX
                         <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Source to pay
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Source to pay
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Current Accounts
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Current Accounts
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Payouts
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Payouts
                         Links
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[70%]  "></span>
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Payouts Links
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Payouts Links
                         POS
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[68%] "></span>
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-700 relative group font-bold hover:cursor-pointer text-[0.9rem]">Corporate Credit Card
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[47%]"></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Corporate Credit Card
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full"></span>
                     </p>
                 </div>
 
                 <!-- div 2  -->
                 <div class="flex flex-col space-y-1">
                     <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">DEVELOPERS</h1>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Docs
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Docs
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Integrations
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Integrations
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">API References
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    <p
+                        class="max-w-fit text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">
+                        API References
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full  "></span>
                     </p>
                 </div>
-                
+
                 <!-- div 3 -->
                 <div class="flex flex-col space-y-1">
                     <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">RESOURCES</h1>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Blog
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Blog
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Learn
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Learn
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">Customer Stories
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    <p
+                        class="max-w-fit text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">
+                        Customer Stories
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full  "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Events
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Events
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Chargeback Guide
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Chargeback Guide
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">Settlement Guide
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    <p
+                        class="max-w-fit text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">
+                        Settlement Guide
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full  "></span>
                     </p>
                 </div>
 
                 <!-- div 4 -->
                 <div class="flex flex-col space-y-1">
                     <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">SOLUTIONS</h1>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Education 
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Education
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">E-commerce
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        E-commerce
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">SaaS
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    <p
+                        class="max-w-fit text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">
+                        SaaS
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full  "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">BFSI
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
-                    </p>  
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">BFSI
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-full "></span>
+                    </p>
                 </div>
 
                 <!-- div 5 -->
                 <div class="flex flex-col space-y-1">
                     <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">FREE TOOLS</h1>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">GST Calculator
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">GST
+                        Calculator
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">GST Number Search
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">GST
+                        Number Search
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">GST Search by PAN
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    <p
+                        class="max-w-fit text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">
+                        GST Search by PAN
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full  "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">ROI Calculator
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">ROI
+                        Calculator
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">CAGR Calculator
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">CAGR
+                        Calculator
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">EBITDA Calculator
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    <p
+                        class="max-w-fit text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">
+                        EBITDA Calculator
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full  "></span>
                     </p>
                 </div>
 
-                
+
             </div>
 
             <!-- 3rd col -->
-            <div  class="flex flex-col space-y-5">
+            <div class="flex flex-col space-y-5">
 
                 <!-- div 1 -->
                 <div class="flex flex-col space-y-1">
                     <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">COMPANY</h1>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">About US
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">About
+                        US
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Careers
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Careers
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">Terms of use
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    <p
+                        class="max-w-fit text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">
+                        Terms of use
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full  "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Privacy Policy
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Privacy Policy
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Grievance Redressal
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Grievance Redressal
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">Responsible Disclosure
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    <p
+                        class="max-w-fit text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">
+                        Responsible Disclosure
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full  "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Partners
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
+                    <p class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">
+                        Partners
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">White papers
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    <p
+                        class="max-w-fit text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">
+                        White papers
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full  "></span>
                     </p>
-                    <p class="text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">Corporate Information
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[73%]  "></span>
+                    <p
+                        class="max-w-fit text-blue-600 relative group font-bold cursor-text hover:cursor-pointer text-[0.9rem]">
+                        Corporate Information
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-full  "></span>
                     </p>
                 </div>
 
                 <!-- div 2 -->
                 <div class="flex flex-col space-y-1">
                     <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">HELP & SUPPORT</h1>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Support
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-[22%] "></span>
-                    </p>
-                    <p class="text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]">Knowledge Base
-                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-600 group-hover:w-[85%] "></span>
-                    </p>
+                    <a class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]"
+                        href="#support">Support
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-full"></span>
+                    </a>
+                    <a class="max-w-fit text-blue-600 relative group font-bold hover:cursor-pointer text-[0.9rem]"
+                        href="#knowledge-base">Knowledge Base
+                        <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 group-hover:w-full"></span>
+                    </a>
+
                 </div>
 
                 <!-- div 3 -->
                 <div class="flex flex-col space-y-1">
                     <h1 class="font-semibold text-gray-700 text-[0.9rem] mb-2">FIND US ONLINE</h1>
-                    
                     <div class="flex space-x-2 ">
                         <a href="https://www.facebook.com" target="_blank">
                             <img src="Images/facebook-icon.svg" alt="fb" class="w-8">
@@ -627,7 +1076,7 @@
                         <a href="https://www.instagram.com/http.404.xo/" target="_blank">
                             <img src="Images/Instagram-icon.svg" alt="instagram" class="w-8">
                         </a>
-                        
+
                         <a href="https://github.com/https-error404" target="_blank">
                             <img src="Images/github-icon.svg" alt="GitHub" class="w-8">
                         </a>
@@ -644,31 +1093,18 @@
 
     </div>
 
-
     <!-- footer -->
-    
+
     <footer class="my-4 text-center mt-[4rem] text-gray-600 font-semibold">
-        <p>Payment aggregation services provided by Razorpay Software Private Limited (RSPL) - An RBI Authorised Online Payment Aggregator</p>
+        <p>Payment aggregation services provided by Razorpay Software Private Limited (RSPL) - An RBI Authorised Online
+            Payment Aggregator</p>
     </footer>
 
-    <footer class="bg-gray-900 text-white py-6 text-center text-sm sm:text-base">
-        
-        <p>© Copyrights. All rights reserved - clone by <span class="font-bold">Bapi Shelke</span></p>
-      </footer>
-      
+    <footer class="bg-gray-900 text-white py-5 text-center text-sm sm:text-base">
 
-    <script>
-        window.addEventListener('scroll', function () {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.remove('bg-transparent');
-                navbar.classList.add('bg-white', 'shadow-md');
-            } else {
-                navbar.classList.remove('bg-white', 'shadow-md');
-                navbar.classList.add('bg-transparent');
-            }
-        });
-    </script>
+        <p>© Copyrights. All rights reserved - clone by <span class="font-bold">Bapi Shelke</span></p>
+    </footer>
+
 </body>
 
 </html>
